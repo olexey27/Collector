@@ -1,0 +1,122 @@
+#root {
+    width: 23rem;
+    background-image: url("../img/Design-Watch Chain.jpeg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: inherit;
+}
+#container {
+    opacity: 90%;
+}
+:root {
+    --mdc-theme-primary: #3385ff;
+    --mdc-theme-secondary: #0052cc;
+}
+dt {
+    background-color: #0052cc;
+    color: var(--mdc-theme-on-primary);
+}
+h2, dd {
+    background-color: var(--mdc-theme-on-primary);
+}
+
+.aktiv { background-color: #7CB342 }
+.inaktiv { background-color: #ffbf00 }
+h1, h2, dl {
+    margin: 0;
+}
+h1 {
+    color: #ffbf00;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+h2 {
+    padding: 0 0 10px 0;
+    text-align: center;
+    padding: 9px 9px 9px 9px;
+    margin-inline: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+i.material-icons {
+    cursor: pointer;
+    float: right;
+}
+button.material-icons {
+    font-size: inherit;
+    vertical-align: bottom;
+}
+[type="checkbox"] {
+    vertical-align: top;
+    margin-right: 8px;
+}
+dt {
+    display: flex;
+    font-weight: 500;
+    padding: 3px 5px;
+    border-top-left-radius: 5px;
+}
+dt span {
+    width: 100%;
+}
+dt, dd {
+    height: 2rem;
+    font-size: 1.2rem;
+}
+dd {
+    display: flex;
+    margin-left: 0;
+    margin: 3px;
+}
+dd label {
+    padding: 3px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+dd label input[type="checkbox"] {
+    margin: 7px 7px;
+}
+dd input[type="search"] {
+    margin-left: 1.5rem;
+}
+.mdc-text-field {
+    height: 2.5rem;
+    width: 100%;
+    margin-inline: 10px;
+}
+
+label {
+    width: 91%;
+    cursor: pointer
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mdc-dialog {
+    opacity: 100%;
+}
+.mdc-dialog__surface {
+    position: absolute;
+    top: 10%;
+    left: 25px;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
