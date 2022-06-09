@@ -1,27 +1,30 @@
 #root {
     width: 23rem;
-    background-image: url("../img/Design-Watch Chain.jpeg");
+    background-image: linear-gradient(to right, rgba(28, 115, 202, 0.472), rgba(152, 26, 211, 0.438)), url("../img/car.gif");
     background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: inherit;
+    background-size: cover;
 }
 #container {
-    opacity: 90%;
+    opacity: 95%;
 }
 :root {
     --mdc-theme-primary: #3385ff;
     --mdc-theme-secondary: #0052cc;
 }
 dt {
-    background-color: #0052cc;
+    background-color: #3385ff;
     color: var(--mdc-theme-on-primary);
 }
 h2, dd {
     background-color: var(--mdc-theme-on-primary);
 }
 
-.aktiv { background-color: #7CB342 }
-.inaktiv { background-color: #ffbf00 }
+.aktiv {
+    background-color: #ffbf00;
+}
+.inaktiv {
+    background-color: #212121;
+}
 h1, h2, dl {
     margin: 0;
 }
@@ -29,8 +32,9 @@ h1 {
     color: #ffbf00;
     text-align: center;
     text-shadow: 1px 1px 1px white;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 10px;
+    font-size: 50px;
 }
 h2 {
     padding: 0 0 10px 0;
@@ -38,7 +42,13 @@ h2 {
     padding: 9px 9px 9px 9px;
     margin-inline: 10px;
     margin-bottom: 10px;
+    border-radius: 0.2rem;
     color: #000000;
+}
+h2:hover {
+    color: #000000;
+    background: greenyellow;
+    box-shadow: 0px 0px 10px #3385ff ,0px 0px 5px #3385ff, 0px 0px 0px #3385ff;
 }
 i.material-icons {
     cursor: pointer;
@@ -53,13 +63,33 @@ button.material-icons {
     margin-right: 8px;
 }
 dt {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     display: flex;
     font-weight: 500;
-    padding: 3px 5px;
-    border-top-left-radius: 5px;
+    padding: 8px 8px;
+    border-radius: 0.2rem;
+    height: 2.5rem;
+    width: 90%;
+    margin: 2px 0px 5px 10px;
 }
 dt span {
     width: 100%;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+dt:hover {
+    color: #000000;
+    background: #3385ff;
+    box-shadow: 0px 0px 10px #ffbf00 ,0px 0px 5px #ffbf00, 0px 0px 0px #ffbf00;
 }
 dt, dd {
     height: 2rem;
@@ -67,8 +97,9 @@ dt, dd {
 }
 dd {
     display: flex;
-    margin-left: 0;
-    margin: 3px;
+    width: 94.3%;
+    margin: 2px 0px 5px 10px;
+    border-radius: 0.2rem;
 }
 dd label {
     padding: 3px 0;
@@ -82,11 +113,15 @@ dd input[type="search"] {
     margin-left: 1.5rem;
 }
 .mdc-text-field {
+    border-radius: 0.2rem;
     height: 2.5rem;
-    width: 100%;
-    margin-inline: 10px;
+    width: 94.6%;
+    margin: 10px 10px 0px 10px;
 }
-
+.mdc-text-field:hover {
+    color: #000000;
+    box-shadow: 0px 0px 10px #ffbf00 ,0px 0px 5px #ffbf00, 0px 0px 0px #ffbf00;
+}
 label {
     width: 91%;
     cursor: pointer
@@ -101,8 +136,11 @@ footer {
 }
 .mdc-dialog__surface {
     position: absolute;
-    top: 10%;
-    left: 25px;
+    top: 3%;
+    left: 40px;
+}
+.mdc-button__label:hover {
+    color: black;
 }
 .material-icons {
     font-family: 'Material Icons';

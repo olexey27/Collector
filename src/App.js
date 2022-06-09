@@ -7,7 +7,7 @@ import SortierDialog from "./components/SortierDialog";
 /**
  * @version 1.0
  * @author Alexey Krasnokutskiy <allxyog@gmail.com>
- * @description Diese App ist eine Garagenliste mit React.js und separatem Model, welche Offline verwenden werden kann
+ * @description Diese App ist eine Collectore mit React.js und separatem Model, welche Offline verwenden werden kann
  * @licence Gnu Public Lesser License 3.0
  *
  */
@@ -64,7 +64,7 @@ class App extends React.Component {
     artikelChecken = (artikel) => {
         artikel.gekauft = !artikel.gekauft
         const aktion = (artikel.gekauft) ? "erledigt" : "reaktiviert"
-        Modell.informieren("[App] Artikel \"" + artikel.name + "\" wurde " + aktion)
+        Modell.informieren("[App] Fahrzeug \"" + artikel.name + "\" wurde " + aktion)
         this.setState(this.state)
     }
 
@@ -98,12 +98,12 @@ class App extends React.Component {
             for (const gruppe of Modell.gruppenListe) {
                 nochZuKaufen.push(
                     <GruppenTag
-                    key={gruppe.id}
-                    aktiv={gruppe == this.state.aktiveGruppe}
-                    aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
-                    checkHandler={this.artikelChecken}
-                    gekauft={false}
-                    gruppe={gruppe}
+                        key={gruppe.id}
+                        aktiv={gruppe == this.state.aktiveGruppe}
+                        aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
+                        checkHandler={this.artikelChecken}
+                        gekauft={false}
+                        gruppe={gruppe}
                     />)
             }
         }
@@ -113,11 +113,11 @@ class App extends React.Component {
             for (const gruppe of Modell.gruppenListe) {
                 schonGekauft.push(
                     <GruppenTag
-                    key={gruppe.id}
-                    aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
-                    checkHandler={this.artikelChecken}
-                    gekauft={true}
-                    gruppe={gruppe}
+                        key={gruppe.id}
+                        aktiveGruppeHandler={() => this.setAktiveGruppe(gruppe)}
+                        checkHandler={this.artikelChecken}
+                        gekauft={true}
+                        gruppe={gruppe}
                     />)
             }
         }
@@ -137,12 +137,12 @@ class App extends React.Component {
         return (
             <div id="container">
                 <header>
-                    <h1>Garage</h1>
+                    <h1>Collectore</h1>
                     <label
                         className="mdc-text-field mdc-text-field--filled mdc-text-field--with-trailing-icon mdc-text-field--no-label">
                         <span className="mdc-text-field__ripple"></span>
                         <input className="mdc-text-field__input" type="search"
-                               id="artikelEingabe" placeholder="Artikel hinzufügen"
+                               id="artikelEingabe" placeholder="Fahrzeug hinzufügen"
                                onKeyPress={e => (e.key == 'Enter') ? this.artikelHinzufuegen() : ''}/>
                         <span className="mdc-line-ripple"></span>
                         <i className="material-icons mdc-text-field__icon mdc-text-field__icon--trailing"
@@ -155,7 +155,7 @@ class App extends React.Component {
 
                 <main>
                     <section>
-                        <h2>Noch zu kaufen
+                        <h2>Noch zu Kaufen
                             <i onClick={() => this.einkaufenAufZuKlappen()} className="material-icons">
                                 {this.state.einkaufenAufgeklappt ? 'expand_more' : 'expand_less'}
                             </i>
@@ -166,7 +166,7 @@ class App extends React.Component {
                     </section>
                     <hr/>
                     <section>
-                        <h2>Schon gekauft
+                        <h2>Garage
                             <i onClick={() => this.erledigtAufZuKlappen()} className="material-icons">
                                 {this.state.erledigtAufgeklappt ? 'expand_more' : 'expand_less'}
                             </i>

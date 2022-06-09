@@ -35,7 +35,7 @@ class Gruppe {
       }
     }
     if (meldungAusgeben) {
-      Modell.informieren("[" + this.name + "] Artikel " + suchName + " nicht gefunden", true)
+      Modell.informieren("[" + this.name + "] Fahrzeug " + suchName + " nicht gefunden", true)
     }
     return null
   }
@@ -62,10 +62,10 @@ class Gruppe {
     if (!vorhandenerArtikel) {
       let neuerArtikel = new Artikel(name, this.artikelListe.length)
       this.artikelListe.push(neuerArtikel)
-      Modell.informieren("[" + this.name + "] Artikel " + name + " hinzugefügt")
+      Modell.informieren("[" + this.name + "] Fahrzeug " + name + " hinzugefügt")
       return neuerArtikel
     } else {
-      Modell.informieren("[" + this.name + "] Artikel " + name + " existiert schon!", true)
+      Modell.informieren("[" + this.name + "] Fahrzeug " + name + " existiert schon!", true)
     }
   }
 
@@ -90,10 +90,10 @@ class Gruppe {
       const index = this.artikelListe.indexOf(loeschArtikel)
       this.artikelListe.splice(index, 1)
       this.artikelNeuNummerieren()
-      Modell.informieren("[" + this.name + "] Artikel \"" + name + "\" entfernt"
+      Modell.informieren("[" + this.name + "] Fahrzeug \"" + name + "\" entfernt"
       )
     } else {
-      Modell.informieren("[" + this.name + "] Artikel \"" + name + "\" konnte NICHT entfernt werden", true
+      Modell.informieren("[" + this.name + "] Fahrzeug \"" + name + "\" konnte NICHT entfernt werden", true
       )
     }
   }
@@ -117,7 +117,7 @@ class Gruppe {
     if (vorhandenerArtikel) {
       vorhandenerArtikel.name = neuerName
     }
-    Modell.informieren("[" + this.name + "] Artikel \"" + alterName + "\" umbenannt in \"" + neuerName + "\"")
+    Modell.informieren("[" + this.name + "] Fahrzeug \"" + alterName + "\" umbenannt in \"" + neuerName + "\"")
   }
 }
 
